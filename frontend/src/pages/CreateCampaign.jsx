@@ -76,7 +76,11 @@ export default function CreateCampaign() {
   };
 
   const teamLogos = logos.filter((l) => l.category === "team");
+  const iplLogos = logos.filter((l) => l.category === "ipl");
+  const wplLogos = logos.filter((l) => l.category === "wpl");
+  const bblLogos = logos.filter((l) => l.category === "bbl");
   const tournamentLogos = logos.filter((l) => l.category === "tournament");
+  const allTeamLogos = [...teamLogos, ...iplLogos, ...wplLogos, ...bblLogos];
 
   const isFormValid = () => {
     return (
