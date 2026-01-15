@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import axios from "axios";
@@ -11,6 +11,8 @@ import {
   Shield,
   Trophy,
   Loader2,
+  Upload,
+  Link as LinkIcon,
 } from "lucide-react";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
@@ -25,6 +27,8 @@ export default function LogoManager() {
   const [showAddForm, setShowAddForm] = useState(false);
   const [addingLogo, setAddingLogo] = useState(false);
   const [activeTab, setActiveTab] = useState("team");
+  const [uploadMode, setUploadMode] = useState("url"); // "url" or "file"
+  const fileInputRef = useRef(null);
 
   const [newLogo, setNewLogo] = useState({
     name: "",
@@ -67,12 +71,35 @@ export default function LogoManager() {
       toast.success("Logo added successfully");
       setNewLogo({ name: "", short_name: "", logo_url: "", category: "team" });
       setShowAddForm(false);
+      setUploadMode("url");
       fetchLogos();
     } catch (error) {
       toast.error("Failed to add logo");
     } finally {
       setAddingLogo(false);
     }
+  };
+
+  const handleFileUpload = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    if (!file.type.startsWith('image/')) {
+      toast.error("Please select an image file");
+      return;
+    }
+
+    if (file.size > 5 * 1024 * 1024) {
+      toast.error("File size should be less than 5MB");
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setNewLogo({ ...newLogo, logo_url: reader.result });
+      toast.success("Image uploaded! Now fill name and short name");
+    };
+    reader.readAsDataURL(file);
   };
 
   const deleteLogo = async (logoId) => {
