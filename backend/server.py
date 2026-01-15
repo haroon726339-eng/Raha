@@ -125,7 +125,7 @@ USERS = {
 # ========== Email Template Generator ==========
 def generate_email_html(campaign: dict) -> str:
     come_logo = "https://customer-assets.emergentagent.com/job_cricketapp-5/artifacts/jnjiun6g_IMG_20260115_174805_313.png"
-    come_trophy = "https://customer-assets.emergentagent.com/job_cricketapp-5/artifacts/mb1i1abm_file_00000000385c72088970d9918642148a.png"
+    come_trophy = "https://customer-assets.emergentagent.com/job_cricketapp-5/artifacts/120typcz_1000043199-removebg-preview.png"
     
     # High quality flag URLs (4K)
     team1_logo = campaign['team1_logo']
@@ -190,11 +190,11 @@ def generate_email_html(campaign: dict) -> str:
                                 </tr>
                             </table>
                             
-                            <!-- NEW: Red Trophy Logo Section -->
+                            <!-- NEW: Red Trophy Logo Section - BIGGER SIZE -->
                             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                                 <tr>
-                                    <td align="center" style="padding: 15px 0 25px 0;">
-                                        <img src="{come_trophy}" alt="COME Trophy" width="150" height="150" style="display: block; width: 150px; height: 150px; object-fit: contain;">
+                                    <td align="center" style="padding: 20px 0 30px 0;">
+                                        <img src="{come_trophy}" alt="COME Trophy" width="220" height="220" style="display: block; width: 220px; height: 220px; object-fit: contain;">
                                     </td>
                                 </tr>
                             </table>
