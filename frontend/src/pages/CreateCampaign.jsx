@@ -295,8 +295,8 @@ export default function CreateCampaign() {
               {/* Team 1 Selection */}
               <div className="mb-4">
                 <label className="block text-sm text-[#A1A1AA] mb-2">Team 1 *</label>
-                <div className="flex flex-wrap gap-3">
-                  {teamLogos.map((logo) => (
+                <div className="flex flex-wrap gap-3 max-h-60 overflow-y-auto p-2 bg-[#0A0A0A] rounded-lg">
+                  {allTeamLogos.map((logo) => (
                     <div
                       key={logo.id}
                       onClick={() => selectTeamLogo('team1', logo)}
