@@ -152,16 +152,16 @@ def generate_email_html(campaign: dict) -> str:
             <td align="center">
                 <table width="500" cellspacing="0" cellpadding="0" border="0" style="max-width: 500px; width: 100%; background-color: #111111;">
                     
-                    <!-- Red Header with COME Logo -->
+                    <!-- Red Header with COME Logo - FIXED -->
                     <tr>
-                        <td style="background-color: #e53935; padding: 15px 20px;">
+                        <td style="background-color: #e53935;">
                             <table width="100%" cellspacing="0" cellpadding="0" border="0">
                                 <tr>
-                                    <td width="50%" valign="middle">
-                                        <img src="{come_logo}" alt="COME" style="height: 40px; width: auto; display: block; max-width: 150px;">
+                                    <td style="padding: 18px 20px;" valign="middle">
+                                        <img src="{come_logo}" alt="COME" width="130" style="display: block; width: 130px; height: auto;">
                                     </td>
-                                    <td width="50%" align="right" valign="middle">
-                                        <span style="color: #ffffff; font-size: 13px;">20 Crore+ users</span>
+                                    <td align="right" style="padding: 18px 20px;" valign="middle">
+                                        <span style="color: #ffffff; font-size: 14px; font-weight: 500;">20 Crore+ users</span>
                                     </td>
                                 </tr>
                             </table>
