@@ -1,34 +1,170 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
-}
-
-.App-header {
-    background-color: #0f0f10;
+.App {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+    background-color: #050505;
 }
 
-.App-link {
-    color: #61dafb;
+/* Layout styles */
+.sidebar {
+    background-color: #121212;
+    border-right: 1px solid #333333;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.main-content {
+    background-color: #050505;
+}
+
+/* Form styles */
+.form-input {
+    background-color: #0A0A0A;
+    border: 1px solid #333333;
+    color: #FFFFFF;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.form-input:focus {
+    border-color: #00FF88;
+    box-shadow: 0 0 0 2px rgba(0, 255, 136, 0.2);
+}
+
+.form-input::placeholder {
+    color: #A1A1AA;
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: #00FF88;
+    color: #000000;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+}
+
+.btn-primary:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.6);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid #333333;
+    color: #FFFFFF;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+    background-color: #1E1E1E;
+    border-color: #00FF88;
+}
+
+/* Card styles */
+.dashboard-card {
+    background-color: #121212;
+    border: 1px solid #333333;
+    border-radius: 12px;
+    padding: 24px;
+    transition: all 0.2s ease;
+}
+
+.dashboard-card:hover {
+    border-color: #00FF88;
+    transform: translateY(-2px);
+}
+
+/* Status badges */
+.status-sent {
+    background-color: rgba(0, 255, 136, 0.15);
+    color: #00FF88;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-draft {
+    background-color: rgba(255, 215, 0, 0.15);
+    color: #FFD700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-failed {
+    background-color: rgba(255, 68, 68, 0.15);
+    color: #FF4444;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Email preview container */
+.email-preview-container {
+    background-color: #111111;
+    border-radius: 12px;
+    overflow: hidden;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* Logo grid */
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+}
+
+.logo-card {
+    background-color: #1E1E1E;
+    border: 1px solid #333333;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.logo-card:hover {
+    border-color: #00FF88;
+    background-color: #252525;
+}
+
+.logo-card.selected {
+    border-color: #00FF88;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+}
+
+/* Table styles */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th {
+    background-color: #1E1E1E;
+    color: #A1A1AA;
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.data-table td {
+    padding: 16px;
+    border-bottom: 1px solid #333333;
+    color: #FFFFFF;
+}
+
+.data-table tr:hover td {
+    background-color: #1E1E1E;
 }
