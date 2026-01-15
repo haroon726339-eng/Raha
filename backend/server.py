@@ -124,7 +124,7 @@ USERS = {
 
 # ========== Email Template Generator ==========
 def generate_email_html(campaign: dict) -> str:
-    come_logo = "https://customer-assets.emergentagent.com/job_cricketapp-5/artifacts/1fb8tcpa_IMG_20260115_162945_452.png"
+    come_logo = "https://customer-assets.emergentagent.com/job_cricketapp-5/artifacts/jnjiun6g_IMG_20260115_174805_313.png"
     
     # High quality flag URLs (4K)
     team1_logo = campaign['team1_logo']
