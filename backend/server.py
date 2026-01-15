@@ -142,21 +142,21 @@ def generate_email_html(campaign: dict) -> str:
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
-<body style="margin:0;padding:0;background-color:#1a1a2e;font-family:Arial,sans-serif;">
-<table width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#1a1a2e;">
+<body style="margin:0;padding:0;background-color:#1e1e2f;font-family:Georgia,serif;">
+<table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#1e1e2f">
 <tr><td align="center">
-<table width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:600px;background-color:#1a1a2e;">
+<table width="600" cellspacing="0" cellpadding="0" border="0" style="max-width:600px;" bgcolor="#1e1e2f">
 
-<!-- RED HEADER WITH STRIPE -->
+<!-- RED HEADER EXACT LIKE DREAM11 -->
 <tr>
-<td style="background:linear-gradient(90deg,#e53935 0%,#e53935 70%,#c62828 70%,#c62828 75%,#e53935 75%,#e53935 100%);padding:12px 20px;">
+<td bgcolor="#e53935" style="background:#e53935 url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 50%22><polygon points=%2270,0 85,0 100,50 85,50%22 fill=%22%23c62828%22/><polygon points=%2280,0 95,0 100,25 95,50 80,50%22 fill=%22%23ffecb3%22/></svg>') no-repeat right center;background-size:contain;">
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 <tr>
-<td><img src="{come_logo}" alt="COME" style="height:45px;width:auto;display:block;"></td>
-<td align="right"><span style="color:#fff;font-size:14px;">20 Crore+ users</span></td>
+<td style="padding:15px 20px;"><img src="{come_logo}" alt="COME" height="42" style="height:42px;width:auto;"></td>
+<td align="right" style="padding:15px 20px;padding-right:100px;"><span style="color:#fff;font-size:14px;">20 Crore+ users</span></td>
 </tr>
 </table>
 </td>
@@ -164,62 +164,62 @@ def generate_email_html(campaign: dict) -> str:
 
 <!-- MAIN CONTENT -->
 <tr>
-<td style="background-color:#1a1a2e;padding:25px 20px 15px 20px;text-align:center;">
+<td bgcolor="#1e1e2f" style="padding:30px 20px;text-align:center;">
 
-<!-- Congratulations -->
-<p style="color:#fff;font-size:26px;font-weight:400;margin:0 0 20px 0;">Congratulations {campaign['winner_name']},</p>
+<!-- Congratulations - EXACT FONT LIKE DREAM11 -->
+<p style="color:#f5e6c8;font-size:28px;font-weight:400;margin:0 0 25px 0;font-family:Georgia,'Times New Roman',serif;">Congratulations {campaign['winner_name']},</p>
 
-<!-- TROPHY -->
-<img src="{come_trophy}" alt="Trophy" style="width:280px;height:280px;display:block;margin:0 auto 15px auto;">
+<!-- TROPHY - BIG SIZE -->
+<img src="{come_trophy}" alt="COME" width="300" height="300" style="display:block;margin:0 auto 20px auto;width:300px;height:300px;">
 
-<!-- Won text -->
-<p style="color:#888;font-size:15px;margin:0 0 8px 0;font-style:italic;">You've won in {campaign['contests_won']} contest(s).</p>
+<!-- You've won - ITALIC LIKE DREAM11 -->
+<p style="color:#888;font-size:16px;margin:0 0 10px 0;font-style:italic;font-family:Georgia,serif;">You've won in {campaign['contests_won']} contest(s).</p>
 
-<!-- Amount -->
-<p style="color:#fff;font-size:52px;font-weight:700;margin:0;">₹{campaign['winning_amount']}</p>
-<p style="color:#666;font-size:12px;margin:5px 0 20px 0;font-style:italic;">₹{campaign['winning_amount']} (total winnings after deductions)</p>
+<!-- AMOUNT - BIG WHITE -->
+<p style="color:#fff;font-size:56px;font-weight:700;margin:0;font-family:Arial,sans-serif;">₹{campaign['winning_amount']}</p>
+<p style="color:#666;font-size:14px;margin:8px 0 25px 0;font-style:italic;font-family:Georgia,serif;">₹{campaign['winning_amount']} (total winnings after deductions)</p>
 
-<!-- Match Info -->
+<!-- MATCH INFO - EXACT LIKE DREAM11 -->
 <table cellspacing="0" cellpadding="0" border="0" style="margin:0 auto;">
 <tr>
-<td style="padding:0 10px;"><img src="{team1_logo}" alt="{campaign['team1_name']}" style="width:50px;height:50px;border-radius:50%;border:2px solid #333;"></td>
-<td style="padding:0 15px;text-align:center;">
-<p style="color:#fff;font-size:18px;font-weight:700;margin:0;">{campaign['team1_name']} vs {campaign['team2_name']}</p>
-<p style="color:#888;font-size:13px;margin:5px 0 0 0;">{campaign['match_date']}</p>
+<td style="padding:0 15px;vertical-align:middle;"><img src="{team1_logo}" alt="{campaign['team1_name']}" width="55" height="55" style="width:55px;height:55px;border-radius:50%;border:2px solid #444;"></td>
+<td style="padding:0 20px;vertical-align:middle;text-align:center;">
+<p style="color:#fff;font-size:20px;font-weight:700;margin:0;font-family:Arial,sans-serif;">{campaign['team1_name']} vs {campaign['team2_name']}</p>
+<p style="color:#888;font-size:14px;margin:5px 0 0 0;">{campaign['match_date']}</p>
 </td>
-<td style="padding:0 10px;"><img src="{team2_logo}" alt="{campaign['team2_name']}" style="width:50px;height:50px;border-radius:50%;border:2px solid #333;"></td>
+<td style="padding:0 15px;vertical-align:middle;"><img src="{team2_logo}" alt="{campaign['team2_name']}" width="55" height="55" style="width:55px;height:55px;border-radius:50%;border:2px solid #444;"></td>
 </tr>
 </table>
 
 </td>
 </tr>
 
-<!-- WINNING BREAKUP TABLE -->
+<!-- WINNING BREAKUP TABLE - DARK TEAL LIKE DREAM11 -->
 <tr>
-<td style="padding:0 20px 20px 20px;">
-<table width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#0d1b2a;border-radius:8px;">
-<tr><td colspan="3" style="padding:12px;border-bottom:1px solid #1b3a4b;"><p style="color:#fff;font-size:16px;font-weight:700;margin:0;text-align:center;">Winning Breakup</p></td></tr>
+<td style="padding:0 20px 25px 20px;">
+<table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#0d2b3e" style="background-color:#0d2b3e;border-radius:8px;">
+<tr><td colspan="3" style="padding:15px;border-bottom:1px solid #1a4a5e;"><p style="color:#fff;font-size:18px;font-weight:700;margin:0;text-align:center;font-family:Arial,sans-serif;">Winning Breakup</p></td></tr>
 <tr>
-<td style="padding:12px;border-bottom:1px solid #1b3a4b;width:33%;"><p style="color:#5a7a8a;font-size:11px;margin:0 0 3px 0;">Prize Pool</p><p style="color:#fff;font-size:15px;font-weight:700;margin:0;">₹{campaign['prize_pool']}</p></td>
-<td style="padding:12px;border-bottom:1px solid #1b3a4b;width:34%;text-align:center;"><p style="color:#5a7a8a;font-size:11px;margin:0 0 3px 0;">Spots</p><p style="color:#fff;font-size:15px;font-weight:700;margin:0;">{campaign['spots']}</p></td>
-<td style="padding:12px;border-bottom:1px solid #1b3a4b;width:33%;text-align:right;"><p style="color:#5a7a8a;font-size:11px;margin:0 0 3px 0;">Entry</p><p style="color:#fff;font-size:15px;font-weight:700;margin:0;">₹{campaign['entry_fee']}</p></td>
+<td style="padding:15px;border-bottom:1px solid #1a4a5e;width:33%;"><p style="color:#5a8a9a;font-size:12px;margin:0 0 5px 0;">Prize Pool</p><p style="color:#fff;font-size:16px;font-weight:700;margin:0;">₹{campaign['prize_pool']}</p></td>
+<td style="padding:15px;border-bottom:1px solid #1a4a5e;width:34%;text-align:center;"><p style="color:#5a8a9a;font-size:12px;margin:0 0 5px 0;">Spots</p><p style="color:#fff;font-size:16px;font-weight:700;margin:0;">{campaign['spots']}</p></td>
+<td style="padding:15px;border-bottom:1px solid #1a4a5e;width:33%;text-align:right;"><p style="color:#5a8a9a;font-size:12px;margin:0 0 5px 0;">Entry</p><p style="color:#fff;font-size:16px;font-weight:700;margin:0;">₹{campaign['entry_fee']}</p></td>
 </tr>
 <tr>
-<td colspan="2" style="padding:12px;border-bottom:1px solid #1b3a4b;"><p style="color:#8899a6;font-size:13px;margin:0;">Winnings from Team 1<br><span style="color:#5a7a8a;font-size:11px;">(Rank #{campaign['rank']})</span></p></td>
-<td style="padding:12px;border-bottom:1px solid #1b3a4b;text-align:right;"><p style="color:#22c55e;font-size:18px;font-weight:700;margin:0;">₹{campaign['winning_amount']}</p></td>
+<td colspan="2" style="padding:15px;border-bottom:1px solid #1a4a5e;"><p style="color:#8aa;font-size:14px;margin:0;">Winnings from Team 1<br><span style="color:#5a8a9a;font-size:12px;">(Rank #{campaign['rank']})</span></p></td>
+<td style="padding:15px;border-bottom:1px solid #1a4a5e;text-align:right;"><p style="color:#22c55e;font-size:20px;font-weight:700;margin:0;">₹{campaign['winning_amount']}</p></td>
 </tr>
 <tr>
-<td colspan="2" style="padding:14px 12px;"><p style="color:#fff;font-size:15px;font-weight:700;margin:0;">Total Winnings</p></td>
-<td style="padding:14px 12px;text-align:right;"><p style="color:#22c55e;font-size:20px;font-weight:800;margin:0;">₹{campaign['winning_amount']}</p></td>
+<td colspan="2" style="padding:18px 15px;"><p style="color:#fff;font-size:16px;font-weight:700;margin:0;">Total Winnings</p></td>
+<td style="padding:18px 15px;text-align:right;"><p style="color:#22c55e;font-size:22px;font-weight:800;margin:0;">₹{campaign['winning_amount']}</p></td>
 </tr>
 </table>
 </td>
 </tr>
 
-<!-- PLAY NOW BUTTON -->
+<!-- GREEN PLAY NOW BUTTON -->
 <tr>
-<td style="padding:0 20px 25px 20px;text-align:center;">
-<a href="#" style="display:inline-block;background-color:#22c55e;color:#000;font-size:16px;font-weight:800;text-decoration:none;padding:14px 80px;border-radius:6px;">PLAY NOW</a>
+<td style="padding:0 20px 30px 20px;text-align:center;">
+<a href="#" style="display:inline-block;background-color:#22c55e;color:#000;font-size:18px;font-weight:800;text-decoration:none;padding:16px 100px;border-radius:6px;font-family:Arial,sans-serif;">PLAY NOW</a>
 </td>
 </tr>
 
