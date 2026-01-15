@@ -513,17 +513,15 @@ async def seed_default_logos(payload: dict = Depends(verify_token)):
         {"name": "Bangladesh", "short_name": "BAN", "logo_url": "https://flagcdn.com/w80/bd.png", "category": "team"},
         {"name": "West Indies", "short_name": "WI", "logo_url": "https://flagcdn.com/w80/jm.png", "category": "team"},
         {"name": "Afghanistan", "short_name": "AFG", "logo_url": "https://flagcdn.com/w80/af.png", "category": "team"},
-        # Tournaments - IPL
-        {"name": "IPL Men's", "short_name": "IPL-M", "logo_url": "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2024/2.png", "category": "tournament"},
-        {"name": "IPL Women's", "short_name": "IPL-W", "logo_url": "https://www.bcci.tv/static-assets/waf-images/wpl/logo/wpl-logo.png", "category": "tournament"},
-        # Big Bash
-        {"name": "Big Bash Men's", "short_name": "BBL-M", "logo_url": "https://upload.wikimedia.org/wikipedia/en/thumb/3/34/Big_Bash_League.svg/200px-Big_Bash_League.svg.png", "category": "tournament"},
-        {"name": "Big Bash Women's", "short_name": "BBL-W", "logo_url": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d1/Women%27s_Big_Bash_League_logo.svg/200px-Women%27s_Big_Bash_League_logo.svg.png", "category": "tournament"},
-        # Other Tournaments
-        {"name": "World Cup", "short_name": "WC", "logo_url": "https://upload.wikimedia.org/wikipedia/en/thumb/b/bd/2023_Cricket_World_Cup_Logo.svg/150px-2023_Cricket_World_Cup_Logo.svg.png", "category": "tournament"},
-        {"name": "Asia Cup", "short_name": "AC", "logo_url": "https://upload.wikimedia.org/wikipedia/en/thumb/5/54/Asia_Cup_Logo.png/150px-Asia_Cup_Logo.png", "category": "tournament"},
-        {"name": "T20 World Cup", "short_name": "T20WC", "logo_url": "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/ICC_Men%27s_T20_World_Cup_logo.svg/150px-ICC_Men%27s_T20_World_Cup_logo.svg.png", "category": "tournament"},
-        {"name": "Champions Trophy", "short_name": "CT", "logo_url": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d6/ICC_Champions_Trophy_logo.svg/150px-ICC_Champions_Trophy_logo.svg.png", "category": "tournament"},
+        # Tournaments - Using placeholder colors for reliable loading
+        {"name": "IPL Men's", "short_name": "IPL-M", "logo_url": "https://placehold.co/80x80/1e40af/ffffff?text=IPL", "category": "tournament"},
+        {"name": "IPL Women's", "short_name": "IPL-W", "logo_url": "https://placehold.co/80x80/be185d/ffffff?text=WIPL", "category": "tournament"},
+        {"name": "Big Bash Men's", "short_name": "BBL-M", "logo_url": "https://placehold.co/80x80/15803d/ffffff?text=BBL", "category": "tournament"},
+        {"name": "Big Bash Women's", "short_name": "BBL-W", "logo_url": "https://placehold.co/80x80/7c3aed/ffffff?text=WBBL", "category": "tournament"},
+        {"name": "World Cup", "short_name": "WC", "logo_url": "https://placehold.co/80x80/0369a1/ffffff?text=WC", "category": "tournament"},
+        {"name": "Asia Cup", "short_name": "AC", "logo_url": "https://placehold.co/80x80/c2410c/ffffff?text=AC", "category": "tournament"},
+        {"name": "T20 World Cup", "short_name": "T20WC", "logo_url": "https://placehold.co/80x80/4338ca/ffffff?text=T20", "category": "tournament"},
+        {"name": "Champions Trophy", "short_name": "CT", "logo_url": "https://placehold.co/80x80/b45309/ffffff?text=CT", "category": "tournament"},
     ]
     
     inserted = 0
