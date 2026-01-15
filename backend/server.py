@@ -183,18 +183,18 @@ def generate_email_html(campaign: dict) -> str:
                             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                                 <tr>
                                     <td align="center">
-                                        <h1 style="color: #22c55e; font-size: 30px; font-weight: 700; margin: 0 0 25px 0; letter-spacing: 0.5px;">
+                                        <h1 style="color: #22c55e; font-size: 32px; font-weight: 600; margin: 0 0 30px 0; font-family: 'Segoe UI', Arial, sans-serif;">
                                             Congratulations {campaign['winner_name']},
                                         </h1>
                                     </td>
                                 </tr>
                             </table>
                             
-                            <!-- NEW: Red Trophy Logo Section - BIGGER SIZE -->
+                            <!-- NEW: Red Trophy Logo Section - VERY BIG LIKE DREAM11 -->
                             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                                 <tr>
-                                    <td align="center" style="padding: 20px 0 30px 0;">
-                                        <img src="{come_trophy}" alt="COME Trophy" width="220" height="220" style="display: block; width: 220px; height: 220px; object-fit: contain;">
+                                    <td align="center" style="padding: 10px 0 40px 0;">
+                                        <img src="{come_trophy}" alt="COME Trophy" width="280" height="280" style="display: block; width: 280px; height: 280px; object-fit: contain;">
                                     </td>
                                 </tr>
                             </table>
