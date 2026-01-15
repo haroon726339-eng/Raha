@@ -148,52 +148,52 @@ def generate_email_html(campaign: dict) -> str:
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>You Champion! You're a winner in {campaign['team1_name']} vs {campaign['team2_name']}</title>
 </head>
-<body style="margin: 0; padding: 0; background-color: #000000; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+<body style="margin: 0; padding: 0; background-color: #0f0f0f; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
     <div style="display: none; max-height: 0px; overflow: hidden;">
         Congratulations {campaign['winner_name']}! You've won ₹{campaign['winning_amount']} in {campaign['team1_name']} vs {campaign['team2_name']} match!
     </div>
     
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #000000;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #0f0f0f;">
         <tr>
             <td align="center">
-                <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="max-width: 600px; width: 100%; background-color: #000000;">
+                <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="max-width: 600px; width: 100%; background-color: #0f0f0f;">
                     
                     <!-- Red Header -->
                     <tr>
                         <td style="background-color: #dc2626;">
                             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                                 <tr>
-                                    <td style="padding: 18px 25px;">
-                                        <img src="{come_logo}" alt="COME" width="130" height="48" style="display: block; width: 130px; height: 48px; object-fit: contain;">
+                                    <td style="padding: 14px 20px;">
+                                        <img src="{come_logo}" alt="COME" width="120" height="44" style="display: block; width: 120px; height: 44px; object-fit: contain;">
                                     </td>
-                                    <td align="right" style="padding: 18px 25px;">
-                                        <span style="color: #ffffff; font-size: 15px; font-weight: 600;">20 Crore+ users</span>
+                                    <td align="right" style="padding: 14px 20px;">
+                                        <span style="color: #ffffff; font-size: 14px; font-weight: 500;">20 Crore+ users</span>
                                     </td>
                                 </tr>
                             </table>
                         </td>
                     </tr>
                     
-                    <!-- Main Content -->
+                    <!-- Main Content - COMPACT -->
                     <tr>
-                        <td style="background-color: #000000; padding: 40px 30px;">
+                        <td style="background-color: #0f0f0f; padding: 25px 25px 20px 25px;">
                             
-                            <!-- Congratulations -->
+                            <!-- Congratulations - WHITE like Dream11 -->
                             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                                 <tr>
-                                    <td align="center" style="padding-bottom: 35px;">
-                                        <h1 style="color: #22c55e; font-size: 34px; font-weight: 600; margin: 0; font-style: italic; font-family: Georgia, serif;">
+                                    <td align="center" style="padding-bottom: 20px;">
+                                        <h1 style="color: #ffffff; font-size: 28px; font-weight: 500; margin: 0; font-style: italic; font-family: Georgia, 'Times New Roman', serif;">
                                             Congratulations {campaign['winner_name']},
                                         </h1>
                                     </td>
                                 </tr>
                             </table>
                             
-                            <!-- BIG TROPHY - 350px -->
+                            <!-- BIG TROPHY -->
                             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                                 <tr>
-                                    <td align="center" style="padding: 20px 0 40px 0;">
-                                        <img src="{come_trophy}" alt="COME" width="350" height="350" style="display: block; width: 350px; height: 350px; object-fit: contain;">
+                                    <td align="center" style="padding: 5px 0 20px 0;">
+                                        <img src="{come_trophy}" alt="COME" width="320" height="320" style="display: block; width: 320px; height: 320px; object-fit: contain;">
                                     </td>
                                 </tr>
                             </table>
@@ -201,8 +201,8 @@ def generate_email_html(campaign: dict) -> str:
                             <!-- You've won -->
                             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                                 <tr>
-                                    <td align="center" style="padding-bottom: 15px;">
-                                        <p style="color: #9ca3af; font-size: 18px; margin: 0; font-style: italic;">
+                                    <td align="center" style="padding-bottom: 8px;">
+                                        <p style="color: #9ca3af; font-size: 16px; margin: 0; font-style: italic;">
                                             You've won in {campaign['contests_won']} contest(s).
                                         </p>
                                     </td>
@@ -212,40 +212,40 @@ def generate_email_html(campaign: dict) -> str:
                             <!-- Winning Amount -->
                             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                                 <tr>
-                                    <td align="center" style="padding: 10px 0;">
-                                        <h2 style="color: #ffffff; font-size: 64px; font-weight: 700; margin: 0;">
+                                    <td align="center" style="padding: 5px 0;">
+                                        <h2 style="color: #ffffff; font-size: 58px; font-weight: 700; margin: 0;">
                                             ₹{campaign['winning_amount']}
                                         </h2>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td align="center" style="padding: 10px 0 40px 0;">
-                                        <p style="color: #6b7280; font-size: 14px; margin: 0; font-style: italic;">
+                                    <td align="center" style="padding: 5px 0 20px 0;">
+                                        <p style="color: #6b7280; font-size: 13px; margin: 0; font-style: italic;">
                                             ₹{campaign['winning_amount']} (total winnings after deductions)
                                         </p>
                                     </td>
                                 </tr>
                             </table>
                             
-                            <!-- Match Info with Flags -->
+                            <!-- Match Info -->
                             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                                 <tr>
-                                    <td align="center" style="padding: 20px 0 30px 0;">
+                                    <td align="center" style="padding: 10px 0 20px 0;">
                                         <table role="presentation" cellspacing="0" cellpadding="0" border="0">
                                             <tr>
-                                                <td align="center" valign="middle" style="padding: 0 20px;">
-                                                    <img src="{team1_logo}" alt="{campaign['team1_name']}" width="70" height="70" style="display: block; width: 70px; height: 70px; border-radius: 50%; border: 3px solid #333333; object-fit: cover; background-color: #1a1a1a;">
+                                                <td align="center" valign="middle" style="padding: 0 15px;">
+                                                    <img src="{team1_logo}" alt="{campaign['team1_name']}" width="60" height="60" style="display: block; width: 60px; height: 60px; border-radius: 50%; border: 2px solid #333333; object-fit: cover; background-color: #1a1a1a;">
                                                 </td>
-                                                <td align="center" valign="middle" style="padding: 0 25px;">
-                                                    <p style="color: #ffffff; font-size: 22px; font-weight: 700; margin: 0 0 8px 0;">
+                                                <td align="center" valign="middle" style="padding: 0 15px;">
+                                                    <p style="color: #ffffff; font-size: 18px; font-weight: 700; margin: 0 0 4px 0;">
                                                         {campaign['team1_name']} vs {campaign['team2_name']}
                                                     </p>
-                                                    <p style="color: #9ca3af; font-size: 15px; margin: 0;">
+                                                    <p style="color: #9ca3af; font-size: 13px; margin: 0;">
                                                         {campaign['match_date']}
                                                     </p>
                                                 </td>
-                                                <td align="center" valign="middle" style="padding: 0 20px;">
-                                                    <img src="{team2_logo}" alt="{campaign['team2_name']}" width="70" height="70" style="display: block; width: 70px; height: 70px; border-radius: 50%; border: 3px solid #333333; object-fit: cover; background-color: #1a1a1a;">
+                                                <td align="center" valign="middle" style="padding: 0 15px;">
+                                                    <img src="{team2_logo}" alt="{campaign['team2_name']}" width="60" height="60" style="display: block; width: 60px; height: 60px; border-radius: 50%; border: 2px solid #333333; object-fit: cover; background-color: #1a1a1a;">
                                                 </td>
                                             </tr>
                                         </table>
@@ -257,43 +257,43 @@ def generate_email_html(campaign: dict) -> str:
                             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                                 <tr>
                                     <td>
-                                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #111111; border-radius: 12px; overflow: hidden;">
+                                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #1a1a1a; border-radius: 8px; overflow: hidden;">
                                             <tr>
-                                                <td colspan="3" style="padding: 18px; border-bottom: 1px solid #222222; background-color: #0a0a0a;">
-                                                    <p style="color: #ffffff; font-size: 18px; font-weight: 700; margin: 0; text-align: center;">
+                                                <td colspan="3" style="padding: 14px; border-bottom: 1px solid #2a2a2a; background-color: #141414;">
+                                                    <p style="color: #ffffff; font-size: 16px; font-weight: 700; margin: 0; text-align: center;">
                                                         Winning Breakup
                                                     </p>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style="padding: 18px; border-bottom: 1px solid #222222; width: 33%;">
-                                                    <p style="color: #6b7280; font-size: 12px; margin: 0 0 6px 0; text-transform: uppercase;">Prize Pool</p>
-                                                    <p style="color: #ffffff; font-size: 18px; font-weight: 700; margin: 0;">₹{campaign['prize_pool']}</p>
+                                                <td style="padding: 14px; border-bottom: 1px solid #2a2a2a; width: 33%;">
+                                                    <p style="color: #6b7280; font-size: 11px; margin: 0 0 4px 0; text-transform: uppercase;">Prize Pool</p>
+                                                    <p style="color: #ffffff; font-size: 16px; font-weight: 700; margin: 0;">₹{campaign['prize_pool']}</p>
                                                 </td>
-                                                <td style="padding: 18px; border-bottom: 1px solid #222222; text-align: center; width: 34%;">
-                                                    <p style="color: #6b7280; font-size: 12px; margin: 0 0 6px 0; text-transform: uppercase;">Spots</p>
-                                                    <p style="color: #ffffff; font-size: 18px; font-weight: 700; margin: 0;">{campaign['spots']}</p>
+                                                <td style="padding: 14px; border-bottom: 1px solid #2a2a2a; text-align: center; width: 34%;">
+                                                    <p style="color: #6b7280; font-size: 11px; margin: 0 0 4px 0; text-transform: uppercase;">Spots</p>
+                                                    <p style="color: #ffffff; font-size: 16px; font-weight: 700; margin: 0;">{campaign['spots']}</p>
                                                 </td>
-                                                <td style="padding: 18px; border-bottom: 1px solid #222222; text-align: right; width: 33%;">
-                                                    <p style="color: #6b7280; font-size: 12px; margin: 0 0 6px 0; text-transform: uppercase;">Entry</p>
-                                                    <p style="color: #ffffff; font-size: 18px; font-weight: 700; margin: 0;">₹{campaign['entry_fee']}</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2" style="padding: 18px; border-bottom: 1px solid #222222;">
-                                                    <p style="color: #9ca3af; font-size: 15px; margin: 0;">Winnings from Team 1</p>
-                                                    <p style="color: #6b7280; font-size: 13px; margin: 5px 0 0 0;">(Rank #{campaign['rank']})</p>
-                                                </td>
-                                                <td style="padding: 18px; border-bottom: 1px solid #222222; text-align: right;">
-                                                    <p style="color: #22c55e; font-size: 22px; font-weight: 700; margin: 0;">₹{campaign['winning_amount']}</p>
+                                                <td style="padding: 14px; border-bottom: 1px solid #2a2a2a; text-align: right; width: 33%;">
+                                                    <p style="color: #6b7280; font-size: 11px; margin: 0 0 4px 0; text-transform: uppercase;">Entry</p>
+                                                    <p style="color: #ffffff; font-size: 16px; font-weight: 700; margin: 0;">₹{campaign['entry_fee']}</p>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td colspan="2" style="padding: 20px 18px; background-color: #0a0a0a;">
-                                                    <p style="color: #ffffff; font-size: 18px; font-weight: 700; margin: 0;">Total Winnings</p>
+                                                <td colspan="2" style="padding: 14px; border-bottom: 1px solid #2a2a2a;">
+                                                    <p style="color: #9ca3af; font-size: 14px; margin: 0;">Winnings from Team 1</p>
+                                                    <p style="color: #6b7280; font-size: 12px; margin: 3px 0 0 0;">(Rank #{campaign['rank']})</p>
                                                 </td>
-                                                <td style="padding: 20px 18px; text-align: right; background-color: #0a0a0a;">
-                                                    <p style="color: #22c55e; font-size: 26px; font-weight: 800; margin: 0;">₹{campaign['winning_amount']}</p>
+                                                <td style="padding: 14px; border-bottom: 1px solid #2a2a2a; text-align: right;">
+                                                    <p style="color: #22c55e; font-size: 18px; font-weight: 700; margin: 0;">₹{campaign['winning_amount']}</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" style="padding: 16px 14px; background-color: #141414;">
+                                                    <p style="color: #ffffff; font-size: 16px; font-weight: 700; margin: 0;">Total Winnings</p>
+                                                </td>
+                                                <td style="padding: 16px 14px; text-align: right; background-color: #141414;">
+                                                    <p style="color: #22c55e; font-size: 22px; font-weight: 800; margin: 0;">₹{campaign['winning_amount']}</p>
                                                 </td>
                                             </tr>
                                         </table>
@@ -302,10 +302,10 @@ def generate_email_html(campaign: dict) -> str:
                             </table>
                             
                             <!-- PLAY NOW Button -->
-                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-top: 40px;">
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-top: 25px;">
                                 <tr>
                                     <td align="center">
-                                        <a href="#" style="display: inline-block; background-color: #22c55e; color: #000000; font-size: 18px; font-weight: 800; text-decoration: none; padding: 18px 120px; border-radius: 8px; text-transform: uppercase; letter-spacing: 1px;">
+                                        <a href="#" style="display: inline-block; background-color: #22c55e; color: #000000; font-size: 16px; font-weight: 800; text-decoration: none; padding: 16px 100px; border-radius: 6px; text-transform: uppercase; letter-spacing: 1px;">
                                             PLAY NOW
                                         </a>
                                     </td>
@@ -315,18 +315,15 @@ def generate_email_html(campaign: dict) -> str:
                         </td>
                     </tr>
                     
-                    <!-- Footer -->
+                    <!-- Footer - NO Made with Emergent -->
                     <tr>
-                        <td style="background-color: #000000; padding: 30px 25px; border-top: 1px solid #222222;">
+                        <td style="background-color: #0f0f0f; padding: 20px; border-top: 1px solid #1a1a1a;">
                             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                                 <tr>
                                     <td align="center">
-                                        <img src="{come_logo}" alt="COME" width="100" height="36" style="display: block; width: 100px; height: 36px; object-fit: contain; margin-bottom: 15px;">
-                                        <p style="color: #6b7280; font-size: 13px; margin: 0 0 8px 0;">
-                                            This email was sent by COME Fantasy Sports.
-                                        </p>
-                                        <p style="color: #4b5563; font-size: 12px; margin: 0;">
-                                            © 2025 COME. All rights reserved.
+                                        <img src="{come_logo}" alt="COME" width="90" height="32" style="display: block; width: 90px; height: 32px; object-fit: contain; margin-bottom: 10px;">
+                                        <p style="color: #4b5563; font-size: 11px; margin: 0;">
+                                            © 2025 COME Fantasy Sports. All rights reserved.
                                         </p>
                                     </td>
                                 </tr>
