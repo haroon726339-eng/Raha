@@ -125,6 +125,9 @@ export default function LogoManager() {
   };
 
   const teamLogos = logos.filter((l) => l.category === "team");
+  const iplLogos = logos.filter((l) => l.category === "ipl");
+  const wplLogos = logos.filter((l) => l.category === "wpl");
+  const bblLogos = logos.filter((l) => l.category === "bbl");
   const tournamentLogos = logos.filter((l) => l.category === "tournament");
 
   return (
@@ -155,30 +158,66 @@ export default function LogoManager() {
 
       <main className="max-w-7xl mx-auto px-6 py-8">
         {/* Tabs */}
-        <div className="flex gap-4 mb-8">
+        <div className="flex flex-wrap gap-3 mb-8">
           <button
             onClick={() => setActiveTab("team")}
-            className={`flex items-center gap-2 px-6 py-3 rounded-lg transition-all ${
+            className={`flex items-center gap-2 px-5 py-2.5 rounded-lg transition-all ${
               activeTab === "team"
                 ? "bg-[#00FF88]/10 text-[#00FF88] border border-[#00FF88]"
                 : "bg-[#121212] text-[#A1A1AA] border border-[#333333] hover:border-[#00FF88]"
             }`}
             data-testid="team-tab"
           >
-            <Shield size={20} />
-            <span className="font-['Teko'] text-lg uppercase">Teams ({teamLogos.length})</span>
+            <Shield size={18} />
+            <span className="font-['Teko'] text-base uppercase">Countries ({teamLogos.length})</span>
+          </button>
+          <button
+            onClick={() => setActiveTab("ipl")}
+            className={`flex items-center gap-2 px-5 py-2.5 rounded-lg transition-all ${
+              activeTab === "ipl"
+                ? "bg-[#1e40af]/20 text-[#60a5fa] border border-[#60a5fa]"
+                : "bg-[#121212] text-[#A1A1AA] border border-[#333333] hover:border-[#60a5fa]"
+            }`}
+            data-testid="ipl-tab"
+          >
+            <Trophy size={18} />
+            <span className="font-['Teko'] text-base uppercase">IPL Teams ({iplLogos.length})</span>
+          </button>
+          <button
+            onClick={() => setActiveTab("wpl")}
+            className={`flex items-center gap-2 px-5 py-2.5 rounded-lg transition-all ${
+              activeTab === "wpl"
+                ? "bg-[#be185d]/20 text-[#f472b6] border border-[#f472b6]"
+                : "bg-[#121212] text-[#A1A1AA] border border-[#333333] hover:border-[#f472b6]"
+            }`}
+            data-testid="wpl-tab"
+          >
+            <Trophy size={18} />
+            <span className="font-['Teko'] text-base uppercase">WPL Teams ({wplLogos.length})</span>
+          </button>
+          <button
+            onClick={() => setActiveTab("bbl")}
+            className={`flex items-center gap-2 px-5 py-2.5 rounded-lg transition-all ${
+              activeTab === "bbl"
+                ? "bg-[#15803d]/20 text-[#4ade80] border border-[#4ade80]"
+                : "bg-[#121212] text-[#A1A1AA] border border-[#333333] hover:border-[#4ade80]"
+            }`}
+            data-testid="bbl-tab"
+          >
+            <Trophy size={18} />
+            <span className="font-['Teko'] text-base uppercase">BBL Teams ({bblLogos.length})</span>
           </button>
           <button
             onClick={() => setActiveTab("tournament")}
-            className={`flex items-center gap-2 px-6 py-3 rounded-lg transition-all ${
+            className={`flex items-center gap-2 px-5 py-2.5 rounded-lg transition-all ${
               activeTab === "tournament"
                 ? "bg-[#FFD700]/10 text-[#FFD700] border border-[#FFD700]"
                 : "bg-[#121212] text-[#A1A1AA] border border-[#333333] hover:border-[#FFD700]"
             }`}
             data-testid="tournament-tab"
           >
-            <Trophy size={20} />
-            <span className="font-['Teko'] text-lg uppercase">Tournaments ({tournamentLogos.length})</span>
+            <Trophy size={18} />
+            <span className="font-['Teko'] text-base uppercase">Tournaments ({tournamentLogos.length})</span>
           </button>
         </div>
 
@@ -206,7 +245,11 @@ export default function LogoManager() {
           animate={{ opacity: 1, y: 0 }}
           className="logo-grid"
         >
-          {(activeTab === "team" ? teamLogos : tournamentLogos).map((logo, index) => (
+          {(activeTab === "team" ? teamLogos : 
+            activeTab === "ipl" ? iplLogos :
+            activeTab === "wpl" ? wplLogos :
+            activeTab === "bbl" ? bblLogos :
+            tournamentLogos).map((logo, index) => (
             <motion.div
               key={logo.id}
               initial={{ opacity: 0, scale: 0.9 }}
@@ -235,7 +278,11 @@ export default function LogoManager() {
         </motion.div>
 
         {/* Empty State */}
-        {(activeTab === "team" ? teamLogos : tournamentLogos).length === 0 && (
+        {(activeTab === "team" ? teamLogos : 
+          activeTab === "ipl" ? iplLogos :
+          activeTab === "wpl" ? wplLogos :
+          activeTab === "bbl" ? bblLogos :
+          tournamentLogos).length === 0 && (
           <div className="text-center py-16">
             <Image size={64} className="mx-auto text-[#333333] mb-4" />
             <p className="text-[#A1A1AA] mb-4">
