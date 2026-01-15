@@ -542,26 +542,26 @@ async def get_stats(payload: dict = Depends(verify_token)):
 @api_router.post("/seed-logos")
 async def seed_default_logos(payload: dict = Depends(verify_token)):
     default_logos = [
-        # National Teams
-        {"name": "India", "short_name": "IND", "logo_url": "https://flagcdn.com/w80/in.png", "category": "team"},
-        {"name": "Australia", "short_name": "AUS", "logo_url": "https://flagcdn.com/w80/au.png", "category": "team"},
-        {"name": "Pakistan", "short_name": "PAK", "logo_url": "https://flagcdn.com/w80/pk.png", "category": "team"},
-        {"name": "England", "short_name": "ENG", "logo_url": "https://flagcdn.com/w80/gb-eng.png", "category": "team"},
-        {"name": "South Africa", "short_name": "SA", "logo_url": "https://flagcdn.com/w80/za.png", "category": "team"},
-        {"name": "New Zealand", "short_name": "NZ", "logo_url": "https://flagcdn.com/w80/nz.png", "category": "team"},
-        {"name": "Sri Lanka", "short_name": "SL", "logo_url": "https://flagcdn.com/w80/lk.png", "category": "team"},
-        {"name": "Bangladesh", "short_name": "BAN", "logo_url": "https://flagcdn.com/w80/bd.png", "category": "team"},
-        {"name": "West Indies", "short_name": "WI", "logo_url": "https://flagcdn.com/w80/jm.png", "category": "team"},
-        {"name": "Afghanistan", "short_name": "AFG", "logo_url": "https://flagcdn.com/w80/af.png", "category": "team"},
-        # Tournaments - Using placeholder colors for reliable loading
-        {"name": "IPL Men's", "short_name": "IPL-M", "logo_url": "https://placehold.co/80x80/1e40af/ffffff?text=IPL", "category": "tournament"},
-        {"name": "IPL Women's", "short_name": "IPL-W", "logo_url": "https://placehold.co/80x80/be185d/ffffff?text=WIPL", "category": "tournament"},
-        {"name": "Big Bash Men's", "short_name": "BBL-M", "logo_url": "https://placehold.co/80x80/15803d/ffffff?text=BBL", "category": "tournament"},
-        {"name": "Big Bash Women's", "short_name": "BBL-W", "logo_url": "https://placehold.co/80x80/7c3aed/ffffff?text=WBBL", "category": "tournament"},
-        {"name": "World Cup", "short_name": "WC", "logo_url": "https://placehold.co/80x80/0369a1/ffffff?text=WC", "category": "tournament"},
-        {"name": "Asia Cup", "short_name": "AC", "logo_url": "https://placehold.co/80x80/c2410c/ffffff?text=AC", "category": "tournament"},
-        {"name": "T20 World Cup", "short_name": "T20WC", "logo_url": "https://placehold.co/80x80/4338ca/ffffff?text=T20", "category": "tournament"},
-        {"name": "Champions Trophy", "short_name": "CT", "logo_url": "https://placehold.co/80x80/b45309/ffffff?text=CT", "category": "tournament"},
+        # National Teams - HIGH QUALITY 4K FLAGS
+        {"name": "India", "short_name": "IND", "logo_url": "https://flagcdn.com/w320/in.png", "category": "team"},
+        {"name": "Australia", "short_name": "AUS", "logo_url": "https://flagcdn.com/w320/au.png", "category": "team"},
+        {"name": "Pakistan", "short_name": "PAK", "logo_url": "https://flagcdn.com/w320/pk.png", "category": "team"},
+        {"name": "England", "short_name": "ENG", "logo_url": "https://flagcdn.com/w320/gb-eng.png", "category": "team"},
+        {"name": "South Africa", "short_name": "SA", "logo_url": "https://flagcdn.com/w320/za.png", "category": "team"},
+        {"name": "New Zealand", "short_name": "NZ", "logo_url": "https://flagcdn.com/w320/nz.png", "category": "team"},
+        {"name": "Sri Lanka", "short_name": "SL", "logo_url": "https://flagcdn.com/w320/lk.png", "category": "team"},
+        {"name": "Bangladesh", "short_name": "BAN", "logo_url": "https://flagcdn.com/w320/bd.png", "category": "team"},
+        {"name": "West Indies", "short_name": "WI", "logo_url": "https://flagcdn.com/w320/jm.png", "category": "team"},
+        {"name": "Afghanistan", "short_name": "AFG", "logo_url": "https://flagcdn.com/w320/af.png", "category": "team"},
+        # Tournaments - HIGH QUALITY LOGOS
+        {"name": "IPL Men's", "short_name": "IPL-M", "logo_url": "https://placehold.co/320x320/1e40af/ffffff?text=IPL&font=roboto", "category": "tournament"},
+        {"name": "IPL Women's", "short_name": "IPL-W", "logo_url": "https://placehold.co/320x320/be185d/ffffff?text=WIPL&font=roboto", "category": "tournament"},
+        {"name": "Big Bash Men's", "short_name": "BBL-M", "logo_url": "https://placehold.co/320x320/15803d/ffffff?text=BBL&font=roboto", "category": "tournament"},
+        {"name": "Big Bash Women's", "short_name": "BBL-W", "logo_url": "https://placehold.co/320x320/7c3aed/ffffff?text=WBBL&font=roboto", "category": "tournament"},
+        {"name": "World Cup", "short_name": "WC", "logo_url": "https://placehold.co/320x320/0369a1/ffffff?text=WC&font=roboto", "category": "tournament"},
+        {"name": "Asia Cup", "short_name": "AC", "logo_url": "https://placehold.co/320x320/c2410c/ffffff?text=AC&font=roboto", "category": "tournament"},
+        {"name": "T20 World Cup", "short_name": "T20WC", "logo_url": "https://placehold.co/320x320/4338ca/ffffff?text=T20&font=roboto", "category": "tournament"},
+        {"name": "Champions Trophy", "short_name": "CT", "logo_url": "https://placehold.co/320x320/b45309/ffffff?text=CT&font=roboto", "category": "tournament"},
     ]
     
     inserted = 0
