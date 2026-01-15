@@ -1,0 +1,120 @@
+{
+  "identity": {
+    "persona": "E1: The Anti-AI Designer",
+    "philosophy": "Fusion over Imitation. Emotion First. Content is King.",
+    "anti_patterns": [
+      "Purple/Teal generic SaaS gradients",
+      "Inter font everywhere (Use Teko for headings)",
+      "Center-everything layouts",
+      "Flat, boring grids"
+    ]
+  },
+  "brand": {
+    "name": "COME",
+    "logo_url": "https://customer-assets.emergentagent.com/job_cricketapp-5/artifacts/1fb8tcpa_IMG_20260115_162945_452.png",
+    "theme": "dark",
+    "emotional_tone": "Electric, Winning, Professional, Sports-Tech"
+  },
+  "colors": {
+    "palette": {
+      "background": "#050505",
+      "surface": "#121212",
+      "surface_highlight": "#1E1E1E",
+      "primary": "#00FF88",
+      "primary_foreground": "#000000",
+      "secondary": "#2A2A2A",
+      "secondary_foreground": "#FFFFFF",
+      "accent": "#FFD700",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#A1A1AA",
+      "border": "#333333",
+      "success": "#00FF88",
+      "error": "#FF4444",
+      "rainbow_gradient": "linear-gradient(90deg, #FF0080, #FF8C00, #40E0D0)"
+    },
+    "usage": {
+      "body_bg": "bg-[#050505]",
+      "card_bg": "bg-[#121212]",
+      "primary_btn": "bg-[#00FF88] text-black hover:bg-[#00CC6A] shadow-[0_0_15px_rgba(0,255,136,0.4)]",
+      "rainbow_text": "bg-clip-text text-transparent bg-gradient-to-r from-[#FF0080] via-[#FF8C00] to-[#40E0D0]"
+    }
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Teko, sans-serif",
+      "weights": ["600", "700"],
+      "usage": "All page titles, card headers, and winning amounts. Uppercase preferred for impact."
+    },
+    "body": {
+      "font_family": "Manrope, sans-serif",
+      "weights": ["400", "500"],
+      "usage": "Dashboard data, form labels, email body text."
+    },
+    "google_fonts_import": "https://fonts.googleapis.com/css2?family=Teko:wght@300..700&family=Manrope:wght@200..800&display=swap"
+  },
+  "layout": {
+    "spacing_scale": "Generous. Use p-6, p-8, gap-6, gap-8.",
+    "grid_system": "Bento Grid (Mode B). Dense but breathable.",
+    "container_style": "Rounded-xl, Border-1 border-[#333333], bg-[#121212]",
+    "glassmorphism": "backdrop-blur-xl bg-black/60 border-white/10 (Use for sticky headers)"
+  },
+  "components": {
+    "buttons": {
+      "style": "Sharp or slightly rounded (rounded-md). High contrast.",
+      "variants": {
+        "default": "bg-[#00FF88] text-black font-bold uppercase tracking-wide hover:scale-105 transition-transform",
+        "outline": "border border-[#333333] text-white hover:bg-[#1E1E1E]",
+        "ghost": "text-[#A1A1AA] hover:text-white"
+      }
+    },
+    "cards": {
+      "style": "Flat dark surface (#121212) with 1px border (#333333). Hover effect: Border glows #00FF88."
+    },
+    "inputs": {
+      "style": "bg-[#0A0A0A] border-[#333333] text-white focus:border-[#00FF88] focus:ring-1 focus:ring-[#00FF88] h-12"
+    },
+    "email_preview": {
+      "instruction": "Must be an isolated container (iframe or shadow DOM equivalent) that renders the HTML exactly as it will appear in Gmail. Dark background #111111, centered container max-w-[600px]."
+    }
+  },
+  "assets": {
+    "logo_come": "https://customer-assets.emergentagent.com/job_cricketapp-5/artifacts/1fb8tcpa_IMG_20260115_162945_452.png",
+    "email_reference": "https://customer-assets.emergentagent.com/job_cricketapp-5/artifacts/e58tn3dk_Screenshot_20260115_154908_Gmail.jpg",
+    "placeholders": {
+      "team_india": "https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg",
+      "team_australia": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Australia.svg",
+      "team_pakistan": "https://upload.wikimedia.org/wikipedia/commons/3/32/Flag_of_Pakistan.svg",
+      "trophy": "https://images.unsplash.com/photo-1629285483773-6b5cde2171d7?auto=format&fit=crop&w=200&q=80"
+    }
+  },
+  "email_template_rules": {
+    "critical": "The email MUST look exactly like the Dream11 reference.",
+    "structure": [
+      "Background: #111111 (Dark)",
+      "Header: Logo centered",
+      "Hero: 'Congratulations' in Green/White",
+      "Amount: Huge font, White text",
+      "Matchup: Team A Logo vs Team B Logo (Circle avatars)",
+      "Breakup Table: Dark grey background, White text, Green numbers",
+      "CTA: 'PLAY NOW' Green button, full width or large pill",
+      "Footer: Social links, Unsubscribe"
+    ],
+    "tech_stack": "Use 'react-email' or raw HTML/CSS with inline styles. NO external stylesheets."
+  },
+  "universal_guidelines": [
+    "Do not use gradients for backgrounds, only for accents.",
+    "Use 'sonner' for toasts.",
+    "All interactive elements must have 'data-testid'.",
+    "Use 'lucide-react' for icons.",
+    "Ensure 4.5:1 contrast ratio for text.",
+    "Mobile-first responsive design."
+  ],
+  "instructions_to_main_agent": {
+    "step_1": "Install dependencies: `npm install @fontsource/teko @fontsource/manrope lucide-react recharts framer-motion clsx tailwind-merge`",
+    "step_2": "Configure Tailwind with the colors defined in this JSON.",
+    "step_3": "Create the 'DashboardLayout' with a sidebar and topbar using the 'COME' logo.",
+    "step_4": "Build the 'CreateCampaign' page with split view: Form on left, Live Email Preview on right.",
+    "step_5": "Implement the 'LogoManager' to allow users to upload team/tournament logos (store in DB/Cloudinary).",
+    "step_6": "Ensure the Email Template is pixel-perfect to the reference."
+  }
+}
