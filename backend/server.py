@@ -202,8 +202,8 @@ def generate_email_html(campaign: dict) -> str:
                             <!-- Contest Win Message -->
                             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                                 <tr>
-                                    <td align="center" style="padding: 10px 0;">
-                                        <p style="color: #9ca3af; font-size: 16px; margin: 0;">
+                                    <td align="center" style="padding: 0 0 15px 0;">
+                                        <p style="color: #9ca3af; font-size: 18px; margin: 0; font-family: 'Segoe UI', Arial, sans-serif;">
                                             You've won in {campaign['contests_won']} contest(s).
                                         </p>
                                     </td>
@@ -213,15 +213,15 @@ def generate_email_html(campaign: dict) -> str:
                             <!-- Big Winning Amount -->
                             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                                 <tr>
-                                    <td align="center" style="padding: 15px 0 5px 0;">
-                                        <h2 style="color: #ffffff; font-size: 56px; font-weight: 800; margin: 0; letter-spacing: -1px;">
+                                    <td align="center" style="padding: 10px 0 5px 0;">
+                                        <h2 style="color: #ffffff; font-size: 60px; font-weight: 700; margin: 0; font-family: 'Segoe UI', Arial, sans-serif;">
                                             ₹{campaign['winning_amount']}
                                         </h2>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td align="center" style="padding: 5px 0 30px 0;">
-                                        <p style="color: #9ca3af; font-size: 14px; margin: 0;">
+                                    <td align="center" style="padding: 8px 0 35px 0;">
+                                        <p style="color: #6b7280; font-size: 14px; margin: 0;">
                                             ₹{campaign['winning_amount']} (total winnings after deductions)
                                         </p>
                                     </td>
