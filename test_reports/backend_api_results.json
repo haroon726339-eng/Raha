@@ -3,104 +3,104 @@
     "total_tests": 16,
     "passed_tests": 16,
     "success_rate": 100.0,
-    "timestamp": "2026-01-15T11:48:59.585034"
+    "timestamp": "2026-01-15T12:04:52.957404"
   },
   "detailed_results": [
     {
       "test": "Root API Endpoint",
       "success": true,
       "details": "Status: 200, Response: {\n  \"message\": \"COME Email Campaign API\"\n}...",
-      "timestamp": "2026-01-15T11:48:58.942652"
+      "timestamp": "2026-01-15T12:04:52.188842"
     },
     {
       "test": "Login - Valid Credentials",
       "success": true,
-      "details": "Status: 200, Response: {\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFyeWFuIiwiZXhwIjoxNzY4NTY0MTM4Ljk3NjUxMn0.58MGQnUe-9DnXEDSHfPV1XgDScDffQU8Z1E8fxfQIGs\",\n  \"username\": \"aryan\"\n}...",
-      "timestamp": "2026-01-15T11:48:58.978884"
+      "details": "Status: 200, Response: {\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFyeWFuIiwiZXhwIjoxNzY4NTY1MDkyLjIyMTcwOX0.y3CNA0AXqd5VFyUmoLDwiXSQPU01imWR8WQYzHuXHxA\",\n  \"username\": \"aryan\"\n}...",
+      "timestamp": "2026-01-15T12:04:52.266216"
     },
     {
       "test": "Login - Invalid Credentials",
       "success": true,
       "details": "Status: 401, Response: {\n  \"detail\": \"Invalid credentials\"\n}...",
-      "timestamp": "2026-01-15T11:48:59.020906"
+      "timestamp": "2026-01-15T12:04:52.320069"
     },
     {
       "test": "Get User Info",
       "success": true,
       "details": "Status: 200, Response: {\n  \"username\": \"aryan\"\n}...",
-      "timestamp": "2026-01-15T11:48:59.061395"
+      "timestamp": "2026-01-15T12:04:52.393959"
     },
     {
       "test": "Get Dashboard Stats",
       "success": true,
-      "details": "Status: 200, Response: {\n  \"total_campaigns\": 0,\n  \"sent_campaigns\": 0,\n  \"draft_campaigns\": 0,\n  \"failed_campaigns\": 0,\n  \"total_logos\": 0\n}...",
-      "timestamp": "2026-01-15T11:48:59.106488"
+      "details": "Status: 200, Response: {\n  \"total_campaigns\": 3,\n  \"sent_campaigns\": 0,\n  \"draft_campaigns\": 3,\n  \"failed_campaigns\": 0,\n  \"total_logos\": 18\n}...",
+      "timestamp": "2026-01-15T12:04:52.433765"
     },
     {
       "test": "Seed Default Logos",
       "success": true,
-      "details": "Status: 200, Response: {\n  \"message\": \"Seeded 13 logos\"\n}...",
-      "timestamp": "2026-01-15T11:48:59.177822"
+      "details": "Status: 200, Response: {\n  \"message\": \"Seeded 0 logos\"\n}...",
+      "timestamp": "2026-01-15T12:04:52.514012"
     },
     {
       "test": "Get All Logos",
       "success": true,
-      "details": "Status: 200, Response: [\n  {\n    \"id\": \"e590ce39-e1e4-4d81-bff8-ecdcb3a50af5\",\n    \"name\": \"India\",\n    \"short_name\": \"IND\",\n    \"logo_url\": \"https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg\",\n    \"category\"...",
-      "timestamp": "2026-01-15T11:48:59.216108"
+      "details": "Status: 200, Response: [\n  {\n    \"id\": \"28028d1b-671e-4b08-b15d-fa4e28cdd35f\",\n    \"name\": \"India\",\n    \"short_name\": \"IND\",\n    \"logo_url\": \"https://flagcdn.com/w80/in.png\",\n    \"category\": \"team\",\n    \"created_at\": \"2026-...",
+      "timestamp": "2026-01-15T12:04:52.554195"
     },
     {
       "test": "Get Team Logos",
       "success": true,
-      "details": "Status: 200, Response: [\n  {\n    \"id\": \"e590ce39-e1e4-4d81-bff8-ecdcb3a50af5\",\n    \"name\": \"India\",\n    \"short_name\": \"IND\",\n    \"logo_url\": \"https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg\",\n    \"category\"...",
-      "timestamp": "2026-01-15T11:48:59.250258"
+      "details": "Status: 200, Response: [\n  {\n    \"id\": \"28028d1b-671e-4b08-b15d-fa4e28cdd35f\",\n    \"name\": \"India\",\n    \"short_name\": \"IND\",\n    \"logo_url\": \"https://flagcdn.com/w80/in.png\",\n    \"category\": \"team\",\n    \"created_at\": \"2026-...",
+      "timestamp": "2026-01-15T12:04:52.597464"
     },
     {
       "test": "Get Tournament Logos",
       "success": true,
-      "details": "Status: 200, Response: [\n  {\n    \"id\": \"55f272a6-62ec-4670-be30-ae35bff8d728\",\n    \"name\": \"IPL\",\n    \"short_name\": \"IPL\",\n    \"logo_url\": \"https://www.iplt20.com/assets/images/ipl-logo-new-old.png\",\n    \"category\": \"tourna...",
-      "timestamp": "2026-01-15T11:48:59.285248"
+      "details": "Status: 200, Response: [\n  {\n    \"id\": \"c274d81f-68c3-4e44-bb14-5c7a0103e54e\",\n    \"name\": \"IPL Men's\",\n    \"short_name\": \"IPL-M\",\n    \"logo_url\": \"https://placehold.co/80x80/1e40af/ffffff?text=IPL\",\n    \"category\": \"tourna...",
+      "timestamp": "2026-01-15T12:04:52.633072"
     },
     {
       "test": "Create New Logo",
       "success": true,
-      "details": "Status: 200, Response: {\n  \"id\": \"aa1a05d8-bfb8-49a7-ac65-a35a392805c1\",\n  \"name\": \"Test Team\",\n  \"short_name\": \"TT\",\n  \"logo_url\": \"https://via.placeholder.com/50\",\n  \"category\": \"team\",\n  \"created_at\": \"2026-01-15T11:48:5...",
-      "timestamp": "2026-01-15T11:48:59.319606"
+      "details": "Status: 200, Response: {\n  \"id\": \"0a081050-816c-4a59-b725-7ccfbcdacdcc\",\n  \"name\": \"Test Team\",\n  \"short_name\": \"TT\",\n  \"logo_url\": \"https://via.placeholder.com/50\",\n  \"category\": \"team\",\n  \"created_at\": \"2026-01-15T12:04:5...",
+      "timestamp": "2026-01-15T12:04:52.708158"
     },
     {
-      "test": "Delete Logo aa1a05d8-bfb8-49a7-ac65-a35a392805c1",
+      "test": "Delete Logo 0a081050-816c-4a59-b725-7ccfbcdacdcc",
       "success": true,
       "details": "Status: 200, Response: {\n  \"message\": \"Logo deleted\"\n}...",
-      "timestamp": "2026-01-15T11:48:59.360136"
+      "timestamp": "2026-01-15T12:04:52.745498"
     },
     {
       "test": "Create Campaign",
       "success": true,
-      "details": "Status: 200, Response: {\n  \"id\": \"0c826b99-a5c8-46f4-b619-3b84cf71daee\",\n  \"winner_name\": \"Test Winner\",\n  \"winner_email\": \"test@example.com\",\n  \"winning_amount\": \"50000\",\n  \"contests_won\": 1,\n  \"team1_name\": \"India\",\n  \"te...",
-      "timestamp": "2026-01-15T11:48:59.407409"
+      "details": "Status: 200, Response: {\n  \"id\": \"ce440ab0-1b09-4407-9ac1-0ccccbb25d75\",\n  \"winner_name\": \"Test Winner\",\n  \"winner_email\": \"test@example.com\",\n  \"winning_amount\": \"50000\",\n  \"contests_won\": 1,\n  \"team1_name\": \"India\",\n  \"te...",
+      "timestamp": "2026-01-15T12:04:52.776717"
     },
     {
       "test": "Get All Campaigns",
       "success": true,
-      "details": "Status: 200, Response: [\n  {\n    \"id\": \"0c826b99-a5c8-46f4-b619-3b84cf71daee\",\n    \"winner_name\": \"Test Winner\",\n    \"winner_email\": \"test@example.com\",\n    \"winning_amount\": \"50000\",\n    \"contests_won\": 1,\n    \"team1_name\"...",
-      "timestamp": "2026-01-15T11:48:59.442033"
+      "details": "Status: 200, Response: [\n  {\n    \"id\": \"ce440ab0-1b09-4407-9ac1-0ccccbb25d75\",\n    \"winner_name\": \"Test Winner\",\n    \"winner_email\": \"test@example.com\",\n    \"winning_amount\": \"50000\",\n    \"contests_won\": 1,\n    \"team1_name\"...",
+      "timestamp": "2026-01-15T12:04:52.813365"
     },
     {
-      "test": "Get Campaign 0c826b99-a5c8-46f4-b619-3b84cf71daee",
+      "test": "Get Campaign ce440ab0-1b09-4407-9ac1-0ccccbb25d75",
       "success": true,
-      "details": "Status: 200, Response: {\n  \"id\": \"0c826b99-a5c8-46f4-b619-3b84cf71daee\",\n  \"winner_name\": \"Test Winner\",\n  \"winner_email\": \"test@example.com\",\n  \"winning_amount\": \"50000\",\n  \"contests_won\": 1,\n  \"team1_name\": \"India\",\n  \"te...",
-      "timestamp": "2026-01-15T11:48:59.516586"
+      "details": "Status: 200, Response: {\n  \"id\": \"ce440ab0-1b09-4407-9ac1-0ccccbb25d75\",\n  \"winner_name\": \"Test Winner\",\n  \"winner_email\": \"test@example.com\",\n  \"winning_amount\": \"50000\",\n  \"contests_won\": 1,\n  \"team1_name\": \"India\",\n  \"te...",
+      "timestamp": "2026-01-15T12:04:52.890262"
     },
     {
-      "test": "Preview Campaign 0c826b99-a5c8-46f4-b619-3b84cf71daee",
+      "test": "Preview Campaign ce440ab0-1b09-4407-9ac1-0ccccbb25d75",
       "success": true,
-      "details": "Status: 200, Response: {\n  \"html\": \"\\n<!DOCTYPE html>\\n<html>\\n<head>\\n    <meta charset=\\\"UTF-8\\\">\\n    <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n    <title>Congratulations Test Winner!</t...",
-      "timestamp": "2026-01-15T11:48:59.551599"
+      "details": "Status: 200, Response: {\n  \"html\": \"\\n<!DOCTYPE html>\\n<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\\n<head>\\n    <meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=UTF-8\\\">\\n    <meta name=\\\"viewport\\\" content=...",
+      "timestamp": "2026-01-15T12:04:52.924380"
     },
     {
-      "test": "Delete Campaign 0c826b99-a5c8-46f4-b619-3b84cf71daee",
+      "test": "Delete Campaign ce440ab0-1b09-4407-9ac1-0ccccbb25d75",
       "success": true,
       "details": "Status: 200, Response: {\n  \"message\": \"Campaign deleted\"\n}...",
-      "timestamp": "2026-01-15T11:48:59.584317"
+      "timestamp": "2026-01-15T12:04:52.956428"
     }
   ]
 }
