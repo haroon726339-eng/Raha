@@ -542,7 +542,7 @@ async def get_stats(payload: dict = Depends(verify_token)):
 @api_router.post("/seed-logos")
 async def seed_default_logos(payload: dict = Depends(verify_token)):
     default_logos = [
-        # National Teams - HIGH QUALITY 4K FLAGS
+        # ============ NATIONAL TEAMS - HIGH QUALITY FLAGS ============
         {"name": "India", "short_name": "IND", "logo_url": "https://flagcdn.com/w320/in.png", "category": "team"},
         {"name": "Australia", "short_name": "AUS", "logo_url": "https://flagcdn.com/w320/au.png", "category": "team"},
         {"name": "Pakistan", "short_name": "PAK", "logo_url": "https://flagcdn.com/w320/pk.png", "category": "team"},
@@ -553,15 +553,45 @@ async def seed_default_logos(payload: dict = Depends(verify_token)):
         {"name": "Bangladesh", "short_name": "BAN", "logo_url": "https://flagcdn.com/w320/bd.png", "category": "team"},
         {"name": "West Indies", "short_name": "WI", "logo_url": "https://flagcdn.com/w320/jm.png", "category": "team"},
         {"name": "Afghanistan", "short_name": "AFG", "logo_url": "https://flagcdn.com/w320/af.png", "category": "team"},
-        # Tournaments - Use Logo Manager to add your own high quality logos
+        
+        # ============ IPL MEN'S TEAMS (10 Teams) ============
+        {"name": "Chennai Super Kings", "short_name": "CSK", "logo_url": "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/CSK/logos/Roundbig/CSKroundbig.png", "category": "ipl"},
+        {"name": "Mumbai Indians", "short_name": "MI", "logo_url": "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/MI/Logos/Roundbig/MIroundbig.png", "category": "ipl"},
+        {"name": "Royal Challengers Bengaluru", "short_name": "RCB", "logo_url": "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/RCB/Logos/Roundbig/RCBroundbig.png", "category": "ipl"},
+        {"name": "Kolkata Knight Riders", "short_name": "KKR", "logo_url": "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/KKR/Logos/Roundbig/KKRroundbig.png", "category": "ipl"},
+        {"name": "Delhi Capitals", "short_name": "DC", "logo_url": "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/DC/Logos/Roundbig/DCroundbig.png", "category": "ipl"},
+        {"name": "Punjab Kings", "short_name": "PBKS", "logo_url": "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/PBKS/Logos/Roundbig/PBKSroundbig.png", "category": "ipl"},
+        {"name": "Rajasthan Royals", "short_name": "RR", "logo_url": "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/RR/Logos/Roundbig/RRroundbig.png", "category": "ipl"},
+        {"name": "Sunrisers Hyderabad", "short_name": "SRH", "logo_url": "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/SRH/Logos/Roundbig/SRHroundbig.png", "category": "ipl"},
+        {"name": "Gujarat Titans", "short_name": "GT", "logo_url": "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/GT/Logos/Roundbig/GTroundbig.png", "category": "ipl"},
+        {"name": "Lucknow Super Giants", "short_name": "LSG", "logo_url": "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/LSG/Logos/Roundbig/LSGroundbig.png", "category": "ipl"},
+        
+        # ============ WPL WOMEN'S TEAMS (5 Teams) ============
+        {"name": "Mumbai Indians Women", "short_name": "MI-W", "logo_url": "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/MI/Logos/Roundbig/MIroundbig.png", "category": "wpl"},
+        {"name": "Delhi Capitals Women", "short_name": "DC-W", "logo_url": "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/DC/Logos/Roundbig/DCroundbig.png", "category": "wpl"},
+        {"name": "Royal Challengers Bengaluru Women", "short_name": "RCB-W", "logo_url": "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/RCB/Logos/Roundbig/RCBroundbig.png", "category": "wpl"},
+        {"name": "Gujarat Giants", "short_name": "GG", "logo_url": "https://www.wplt20.com/static-assets/images/teams/gg-logo.png", "category": "wpl"},
+        {"name": "UP Warriorz", "short_name": "UPW", "logo_url": "https://www.wplt20.com/static-assets/images/teams/upw-logo.png", "category": "wpl"},
+        
+        # ============ BIG BASH LEAGUE TEAMS (8 Teams) ============
+        {"name": "Sydney Sixers", "short_name": "SIX", "logo_url": "https://www.bigbash.com.au/-/media/Logos/Teams/BBL/Sixers-Logo.ashx", "category": "bbl"},
+        {"name": "Sydney Thunder", "short_name": "THU", "logo_url": "https://www.bigbash.com.au/-/media/Logos/Teams/BBL/Thunder-Logo.ashx", "category": "bbl"},
+        {"name": "Melbourne Stars", "short_name": "STA", "logo_url": "https://www.bigbash.com.au/-/media/Logos/Teams/BBL/Stars-Logo.ashx", "category": "bbl"},
+        {"name": "Melbourne Renegades", "short_name": "REN", "logo_url": "https://www.bigbash.com.au/-/media/Logos/Teams/BBL/Renegades-Logo.ashx", "category": "bbl"},
+        {"name": "Brisbane Heat", "short_name": "HEA", "logo_url": "https://www.bigbash.com.au/-/media/Logos/Teams/BBL/Heat-Logo.ashx", "category": "bbl"},
+        {"name": "Adelaide Strikers", "short_name": "STR", "logo_url": "https://www.bigbash.com.au/-/media/Logos/Teams/BBL/Strikers-Logo.ashx", "category": "bbl"},
+        {"name": "Perth Scorchers", "short_name": "SCO", "logo_url": "https://www.bigbash.com.au/-/media/Logos/Teams/BBL/Scorchers-Logo.ashx", "category": "bbl"},
+        {"name": "Hobart Hurricanes", "short_name": "HUR", "logo_url": "https://www.bigbash.com.au/-/media/Logos/Teams/BBL/Hurricanes-Logo.ashx", "category": "bbl"},
+        
+        # ============ TOURNAMENTS ============
         {"name": "TATA IPL", "short_name": "IPL", "logo_url": "https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/800px-Indian_Premier_League_Official_Logo.svg.png", "category": "tournament"},
-        {"name": "WPL Women's", "short_name": "WPL", "logo_url": "https://i.imgur.com/JKz8QYk.png", "category": "tournament"},
-        {"name": "Big Bash League", "short_name": "BBL", "logo_url": "https://i.imgur.com/NxYz8Qp.png", "category": "tournament"},
-        {"name": "WBBL Women's", "short_name": "WBBL", "logo_url": "https://i.imgur.com/mR5TxZk.png", "category": "tournament"},
-        {"name": "ICC World Cup", "short_name": "WC", "logo_url": "https://i.imgur.com/K8jLm3p.png", "category": "tournament"},
-        {"name": "Asia Cup", "short_name": "AC", "logo_url": "https://i.imgur.com/vZ9XqRn.png", "category": "tournament"},
-        {"name": "T20 World Cup", "short_name": "T20WC", "logo_url": "https://i.imgur.com/pL4Ym8k.png", "category": "tournament"},
-        {"name": "Champions Trophy", "short_name": "CT", "logo_url": "https://i.imgur.com/qN7Rz5m.png", "category": "tournament"},
+        {"name": "WPL Women's Premier League", "short_name": "WPL", "logo_url": "https://www.wplt20.com/static-assets/images/wpl-logo.png", "category": "tournament"},
+        {"name": "Big Bash League", "short_name": "BBL", "logo_url": "https://www.bigbash.com.au/-/media/Logos/Leagues/BBL-Logo.ashx", "category": "tournament"},
+        {"name": "WBBL Women's Big Bash", "short_name": "WBBL", "logo_url": "https://www.bigbash.com.au/-/media/Logos/Leagues/WBBL-Logo.ashx", "category": "tournament"},
+        {"name": "ICC World Cup", "short_name": "WC", "logo_url": "https://resources.pulse.icc-cricket.com/ICC/photo/2023/01/12/e4e69cf0-0187-4fc4-8df5-cb47ba3f5d0e/CWC23.png", "category": "tournament"},
+        {"name": "Asia Cup", "short_name": "AC", "logo_url": "https://resources.pulse.icc-cricket.com/ICC/photo/2022/08/17/f8762c1b-e82e-4cc8-a47c-aae98c2e0e15/Asia-Cup.png", "category": "tournament"},
+        {"name": "T20 World Cup", "short_name": "T20WC", "logo_url": "https://resources.pulse.icc-cricket.com/ICC/photo/2024/01/09/ca46a2d2-04c2-4e06-8cf7-b4f56e40d9e9/T20WC24.png", "category": "tournament"},
+        {"name": "Champions Trophy", "short_name": "CT", "logo_url": "https://resources.pulse.icc-cricket.com/ICC/photo/2024/06/04/44c2a6c4-2c5c-4b9f-9bd6-08fd0e2cfbd1/CT25.png", "category": "tournament"},
     ]
     
     inserted = 0
