@@ -263,6 +263,34 @@ export default function LogoManager() {
             >
               <h2 className="font-['Teko'] text-2xl text-white uppercase mb-6">Add New Logo</h2>
 
+              {/* Upload Mode Toggle */}
+              <div className="flex gap-2 mb-6">
+                <button
+                  onClick={() => setUploadMode("url")}
+                  className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-lg transition-all ${
+                    uploadMode === "url"
+                      ? "bg-[#00FF88]/20 text-[#00FF88] border border-[#00FF88]"
+                      : "bg-[#1E1E1E] text-[#A1A1AA] border border-[#333333]"
+                  }`}
+                  data-testid="url-mode-btn"
+                >
+                  <LinkIcon size={18} />
+                  URL Link
+                </button>
+                <button
+                  onClick={() => setUploadMode("file")}
+                  className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-lg transition-all ${
+                    uploadMode === "file"
+                      ? "bg-[#00FF88]/20 text-[#00FF88] border border-[#00FF88]"
+                      : "bg-[#1E1E1E] text-[#A1A1AA] border border-[#333333]"
+                  }`}
+                  data-testid="file-mode-btn"
+                >
+                  <Upload size={18} />
+                  Upload File
+                </button>
+              </div>
+
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm text-[#A1A1AA] mb-2">Name</label>
@@ -288,17 +316,40 @@ export default function LogoManager() {
                   />
                 </div>
 
-                <div>
-                  <label className="block text-sm text-[#A1A1AA] mb-2">Logo URL</label>
-                  <input
-                    type="text"
-                    value={newLogo.logo_url}
-                    onChange={(e) => setNewLogo({ ...newLogo, logo_url: e.target.value })}
-                    className="form-input w-full"
-                    placeholder="https://..."
-                    data-testid="new-logo-url"
-                  />
-                </div>
+                {uploadMode === "url" ? (
+                  <div>
+                    <label className="block text-sm text-[#A1A1AA] mb-2">Logo URL</label>
+                    <input
+                      type="text"
+                      value={newLogo.logo_url}
+                      onChange={(e) => setNewLogo({ ...newLogo, logo_url: e.target.value })}
+                      className="form-input w-full"
+                      placeholder="https://..."
+                      data-testid="new-logo-url"
+                    />
+                  </div>
+                ) : (
+                  <div>
+                    <label className="block text-sm text-[#A1A1AA] mb-2">Upload Logo Image</label>
+                    <input
+                      type="file"
+                      ref={fileInputRef}
+                      onChange={handleFileUpload}
+                      accept="image/*"
+                      className="hidden"
+                      data-testid="file-input"
+                    />
+                    <button
+                      onClick={() => fileInputRef.current?.click()}
+                      className="w-full p-4 border-2 border-dashed border-[#333333] rounded-lg hover:border-[#00FF88] transition-colors flex flex-col items-center gap-2"
+                      data-testid="upload-button"
+                    >
+                      <Upload size={32} className="text-[#A1A1AA]" />
+                      <span className="text-[#A1A1AA] text-sm">Click to upload image</span>
+                      <span className="text-[#666] text-xs">PNG, JPG, SVG (max 5MB)</span>
+                    </button>
+                  </div>
+                )}
 
                 <div>
                   <label className="block text-sm text-[#A1A1AA] mb-2">Category</label>
