@@ -422,19 +422,19 @@ async def get_stats(payload: dict = Depends(verify_token)):
 @api_router.post("/seed-logos")
 async def seed_default_logos(payload: dict = Depends(verify_token)):
     default_logos = [
-        {"name": "India", "short_name": "IND", "logo_url": "https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg", "category": "team"},
-        {"name": "Australia", "short_name": "AUS", "logo_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Australia.svg", "category": "team"},
-        {"name": "Pakistan", "short_name": "PAK", "logo_url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Flag_of_Pakistan.svg", "category": "team"},
-        {"name": "England", "short_name": "ENG", "logo_url": "https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg", "category": "team"},
-        {"name": "South Africa", "short_name": "SA", "logo_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg", "category": "team"},
-        {"name": "New Zealand", "short_name": "NZ", "logo_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_New_Zealand.svg", "category": "team"},
-        {"name": "Sri Lanka", "short_name": "SL", "logo_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Flag_of_Sri_Lanka.svg", "category": "team"},
-        {"name": "Bangladesh", "short_name": "BAN", "logo_url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Bangladesh.svg", "category": "team"},
-        {"name": "West Indies", "short_name": "WI", "logo_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Flag_of_the_West_Indies_Federation_%281958%E2%80%931962%29.svg", "category": "team"},
-        {"name": "Afghanistan", "short_name": "AFG", "logo_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg", "category": "team"},
-        {"name": "IPL", "short_name": "IPL", "logo_url": "https://www.iplt20.com/assets/images/ipl-logo-new-old.png", "category": "tournament"},
-        {"name": "World Cup", "short_name": "WC", "logo_url": "https://upload.wikimedia.org/wikipedia/en/b/bd/2023_Cricket_World_Cup_Logo.svg", "category": "tournament"},
-        {"name": "Asia Cup", "short_name": "AC", "logo_url": "https://upload.wikimedia.org/wikipedia/en/5/54/Asia_Cup_Logo.png", "category": "tournament"},
+        {"name": "India", "short_name": "IND", "logo_url": "https://flagcdn.com/w80/in.png", "category": "team"},
+        {"name": "Australia", "short_name": "AUS", "logo_url": "https://flagcdn.com/w80/au.png", "category": "team"},
+        {"name": "Pakistan", "short_name": "PAK", "logo_url": "https://flagcdn.com/w80/pk.png", "category": "team"},
+        {"name": "England", "short_name": "ENG", "logo_url": "https://flagcdn.com/w80/gb-eng.png", "category": "team"},
+        {"name": "South Africa", "short_name": "SA", "logo_url": "https://flagcdn.com/w80/za.png", "category": "team"},
+        {"name": "New Zealand", "short_name": "NZ", "logo_url": "https://flagcdn.com/w80/nz.png", "category": "team"},
+        {"name": "Sri Lanka", "short_name": "SL", "logo_url": "https://flagcdn.com/w80/lk.png", "category": "team"},
+        {"name": "Bangladesh", "short_name": "BAN", "logo_url": "https://flagcdn.com/w80/bd.png", "category": "team"},
+        {"name": "West Indies", "short_name": "WI", "logo_url": "https://flagcdn.com/w80/jm.png", "category": "team"},
+        {"name": "Afghanistan", "short_name": "AFG", "logo_url": "https://flagcdn.com/w80/af.png", "category": "team"},
+        {"name": "IPL", "short_name": "IPL", "logo_url": "https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=100&h=100&fit=crop", "category": "tournament"},
+        {"name": "World Cup", "short_name": "WC", "logo_url": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=100&h=100&fit=crop", "category": "tournament"},
+        {"name": "Asia Cup", "short_name": "AC", "logo_url": "https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?w=100&h=100&fit=crop", "category": "tournament"},
     ]
     
     inserted = 0
